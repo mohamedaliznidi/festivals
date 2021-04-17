@@ -265,40 +265,32 @@ p {
 .box--locations {
   background-color: #6c73dc;
 }
-.box--image,
-.box--video {
+.box--image {
   padding: 0;
+  background-color: #121519;
 }
-.box--video::before,
-.box--video::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-}
-.box--video::before {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 38px rgba(0, 0, 0, 0.3);
-}
-.box--video::after {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 0 10px 15px;
-  border-color: transparent transparent transparent #121519;
-  margin-left: 2px;
-}
+
 .box__img {
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+.box_img {
+  background-color: #121519;
+  display: block;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
